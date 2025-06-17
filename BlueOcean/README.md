@@ -7,7 +7,7 @@
 
 ## 📁 프로젝트 구조
 
-
+<details> <summary>정상적으로 렌더링되는 마크다운 예시</summary> <pre> ``` babybaby/ ├── frontend/ # React 기반 사용자 인터페이스 │ ├── public/ │ └── src/ │ ├── App.js │ └── App.css ├── backend/ # 크롤링 및 요약 코드 │ ├── crwaling.ipynb # 웹 크롤링용 Jupyter 노트북 │ └── app.py # GPT API 기반 요약 실행 코드 ├── README.md └── ... ``` </pre> </details>
 
 babybaby/
 ├── frontend/ # React 기반 사용자 인터페이스
