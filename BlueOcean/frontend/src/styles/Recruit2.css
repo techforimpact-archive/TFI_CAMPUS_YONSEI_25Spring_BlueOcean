@@ -1,0 +1,92 @@
+.recruit2-wrapper {
+  background-color: #dfeeff;
+  height: 100dvh;
+  max-width: 420px;
+  width: 100vw;
+  font-family: 'Arial', sans-serif;
+  overflow-y: auto;           /* ✅ 세로 스크롤 허용 */
+  box-sizing: border-box;
+  padding-bottom: 80px;
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  background-color: transparent; /* ✅ 배경색 없애기 */
+  padding: 0;                    /* ✅ 패딩 없애기 */
+  box-shadow: none;
+  border: none;
+}
+
+.search-bar input {
+  width: 200px;
+  padding: 10px 16px;
+  border-radius: 24px;
+  font-size: 14px;
+  border: 1px solid #ccc;        /* ✔ 살짝 보이는 테두리 */
+  background-color: white;
+  outline: none;
+}
+
+.recruit2-title {
+  font-size: 28px;
+  text-align: center;
+  color: #4E9AE9;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.recruit2-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.recruit2-switch-btn {
+  background-color: #4e9ae9;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 10px;
+  cursor: pointer;
+}
+.button-group {
+  justify-content: flex-end;
+  margin-top: auto; /* ✅ 아래쪽에 고정 */
+}
+
+.ticket-button2 {
+  background-color: #82b2ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0px 1px;
+  font-size: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 50%;
+}
+
+.ticket-list1 {
+  margin-right: 35px;
+}
+
+.ticket-button1 {
+  background-color: #BFD8FF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0px 1px;
+  font-size: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 50%;
+  margin-top:30px;
+}
+
+.ticket-button2:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}

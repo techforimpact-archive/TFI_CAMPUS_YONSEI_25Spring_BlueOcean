@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  /* ✅ 세로 스크롤은 살리고 가로만 숨기기 */
+}
+
+
+.notice-wrapper {
+  width: 100vw;       /* ✅ 모바일 브라우저 UI 제외한 실제 높이 사용 */
+  max-width: 420px;
+  height: 100dvh;
+  background-color: #D8F1FF;
+  padding: 16px;
+  font-family: sans-serif;
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+}
+
+
+.search-bar1 {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid #ffffff;
+  font-size: 10px;
+}
+
+.notice-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notice-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start; /* 상단 정렬 */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  height: 120px;
+}
+
+.image-box {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer; /* ✅ 포인터 커서 */
+  position: relative;
+}
+
+
+.thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.thumb-placeholder {
+  width: 80px;       /* 동일하게 조정 */
+  height: 140px;
+  border-radius: 8px;
+}
+.image-box:hover .thumb {
+  transform: scale(1.03);         /* 약간 확대 */
+  filter: brightness(1.05);       /* 약간 밝게 */
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;           /* ✅ 내부 스크롤 */
+  max-height: 100%;           /* 카드 높이에 맞춤 */
+  padding-right: 4px;         /* 스크롤바 안겹치게 */
+}
+
+.title {
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.summary {
+  font-size: 8px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.keywords {
+  display: flex;
+  gap: 1px;
+  font-size: 9px;
+}
+.btn-link {
+  border: none;
+  align-self: flex-start;
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  background-color: #5BB7EB;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.category-tab {
+  border: none;
+  background-color: transparent;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-family: 'ImcreSoojin';
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-width: 70px;
+}
+
+.category-tab.active {
+  background-color: #ffffff;
+  font-weight: bold;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.scroll-indicator {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.15); /* 흐릿한 느낌 */
+  z-index: 999;
+  pointer-events: none;
+  animation: moveRightArrow 2.5s infinite ease-in-out;
+}
+
+@keyframes moveRightArrow {
+  0% { transform: translateY(-50%) translateX(0); opacity: 0.2; }
+  50% { transform: translateY(-50%) translateX(5px); opacity: 0.9; }
+  100% { transform: translateY(-50%) translateX(0); opacity: 0.2; }
+}
+
+
+
+.notice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.go-recruit-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 0px;
+  margin-top: -20px;
+  transition: transform 0.2s ease;
+}
+
+.go-recruit-btn:hover {
+  transform: scale(1.2);
+}

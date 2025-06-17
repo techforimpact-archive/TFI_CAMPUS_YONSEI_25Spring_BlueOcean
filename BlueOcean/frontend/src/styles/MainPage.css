@@ -1,0 +1,278 @@
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.main-wrapper {
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  overflow: hidden;
+}
+.main-page {
+  width: 100%;
+  max-width: 420px;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* 종이배 */
+.boat {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  width: 100px;
+  transform: translate(-50%, -50%);
+  animation: float 3s ease-in-out infinite;
+  cursor: pointer;
+  z-index: 3; /* ✅ 위로 나오게 */
+}
+
+
+/* 하단 탭바 */
+.tab-bar {
+  position: fixed; /* ✅ 고정 위치로 변경 */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 420px;
+  height: 60px;
+  background: #fdf8f3;
+  border-radius: 40px 40px 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  z-index: 100;
+}
+
+.tab-logo-background {
+  position: absolute;
+  top: -38px;        /* 기존보다 더 위로 밀어줌 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;       /* 로고보다 약간 더 크게 */
+  height: 90px;
+  background: #fdf8f3;
+  border-radius: 50%;
+  z-index: 9;
+}
+
+/* 탭바 아이콘 */
+.tab-icon {
+  width: 45px;   /* 크기 확대 */
+  height: 45px;
+  opacity: 0.9;
+  transition: transform 0.2s;
+}
+
+/* 중앙 상단 로고 */
+.tab-logo {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: auto;
+  z-index: 11;
+}
+
+.tab-icon:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+.tab-icon.selected {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* 애니메이션 */
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -8px);
+  }
+}
+
+@keyframes floatBottle {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.main-title {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 5;
+}
+
+/* 텍스트 + 아이콘 그룹 */
+.main-title-text-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* 왕관 이미지 */
+.main-title-icon {
+  position: absolute;
+  top: -45px;  /* 왕관을 얼마나 띄울지 */
+  left: 11%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: auto;
+  z-index: 6;
+}
+
+/* 큰 제목 */
+.main-title-text {
+  font-size:35px;
+  font-weight: bold;
+  color: rgb(110, 102, 88);
+  line-height: 1.2;
+  margin-top: -30px;
+  font-family: 'ImcreSoojin';
+}
+
+/* 작은 부제목 */
+.main-subtitle-text {
+  font-size: 10px;
+  color: #6D6E66;
+  margin-top: 0px;
+  font-family: 'ImcreSoojin';
+}
+
+/* 섬 */
+/* 섬 이미지 크기 키움 */
+.island-img {
+  width: 100px;  /* ✅ 섬 이미지 더 크게 */
+  height: auto;
+}
+
+/* 섬 텍스트 */
+.island-label {
+  margin-top:-20px;
+  font-size: 7px;       /* ✅ 글자 크기도 확대 */
+  font-weight: bold;
+  color: #6D6E66;
+}
+
+
+.ocean-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #D8F1FF 0%, #A3DAF2 50%, #78C6E5 100%);
+  z-index: 0;
+  overflow: hidden;
+}
+
+
+/* 상단 해변 곡선 */
+.ocean-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background: #fce3ad;
+  z-index: 1;
+  animation: beachShift 5s ease-in-out infinite;
+  clip-path: path("M0,100 Q50,60 100,90 T200,90 T300,70 T400,90 T500,60 T600,100 T700,90 T800,80 T900,100 T1000,90 T1100,70 T1200,100 V0 H0 Z");
+}
+
+@keyframes beachShift {
+  0% {
+    clip-path: path("M0,100 Q50,60 100,90 T200,90 T300,70 T400,90 T500,60 T600,100 T700,90 T800,80 T900,100 T1000,90 T1100,70 T1200,100 V0 H0 Z");
+  }
+  50% {
+    clip-path: path("M0,100 Q50,65 100,85 T200,95 T300,75 T400,85 T500,65 T600,105 T700,85 T800,85 T900,95 T1000,85 T1100,75 T1200,105 V0 H0 Z");
+  }
+  100% {
+    clip-path: path("M0,100 Q50,60 100,90 T200,90 T300,70 T400,90 T500,60 T600,100 T700,90 T800,80 T900,100 T1000,90 T1100,70 T1200,100 V0 H0 Z");
+  }
+}
+.ripple-container {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  z-index: 2;
+}
+
+/* 공통 스타일 */
+.ripple {
+  position: absolute;
+  top: 0;
+  left: -60px;
+  transform: translate(-30%, 0%) scale(0.3); /* 👈 수정된 부분 */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  opacity: 0.3;
+  animation: rippleExpand 10s linear infinite;
+}
+
+
+/* 각각 딜레이로 겹쳐 퍼지도록 */
+.ripple1 {
+  animation-delay: 0s;
+}
+.ripple2 {
+  animation-delay: 2s;
+}
+.ripple3 {
+  animation-delay: 4s;
+}
+
+@keyframes rippleExpand {
+  0% {
+    transform: scale(0.3);
+    opacity: 0.25;
+  }
+  80% {
+    transform: scale(5);
+    opacity: 0.03;
+  }
+  100% {
+    transform: scale(5.5);
+    opacity: 0;
+  }
+}

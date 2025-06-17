@@ -1,0 +1,20 @@
+# Ignore Python virtual env
+backend/venv/
+backend/__pycache__/
+
+# Flask 환경 설정 파일
+backend/.env
+
+# Node.js dependencies
+frontend/node_modules/
+
+# React build
+frontend/build/
+
+# OS / Editor files
+.DS_Store
+*.log
+*.swp
+*.swo
+*.idea/
+.vscode/

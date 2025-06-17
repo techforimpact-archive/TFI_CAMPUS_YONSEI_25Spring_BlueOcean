@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap');
+
+.fullscreen-wrapper1 {
+  max-width: 420px;
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;           /* ✅ 세로 스크롤 허용 */
+  padding-bottom: 40px;
+  background-color: #d0eaff;
+}
+
+.recruitment-list-wrapper {
+  width: 100vw;
+  background-color: #d0eaff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.recruitment-scroll-area {
+  width: 100%;
+  overflow-y: auto;
+  padding-bottom: 40px;
+  flex-grow: 1; /* 💡 내용 늘어나면 아래로 확장됨 */
+}
+
+.header-background {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.boat-image {
+  width: 100%;
+  display: block;
+  height: auto;
+  object-fit: contain;
+  margin-top: 0px; /* 원하는 만큼 간격 조정 */
+}
+
+.tab-buttons {
+  display: flex;
+  width: 90%;
+  margin-top: -50px;
+  z-index: 2;
+  gap: 20px;
+}
+
+.tab {
+  flex: 1;
+  background-color: #4AB0E7;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tab.active {
+  background-color: #4AB0E7;
+}
+
+.recommend-section {
+  width: 90%;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.recommend-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #4E9AE9;
+  margin-top: 150px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+.ticket-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto auto;
+  width: 95%;
+  max-width: 360px;
+  margin: 10px auto;
+  background-color: transparent;
+  margin-left:30px;
+}
+
+/* 모든 그리드 박스 공통 */
+.grid-box {
+  padding: 6px 5px;
+  background-color: #d0eaff;
+}
+
+/* 색상 분리 */
+.top-left,
+.bottom-left,
+.bottom-right,
+.top-right {
+  background-color: #519DEA;
+}
+/* 상단 두 상자에 Alegreya Sans 적용 */
+.top-left,
+.top-right {
+  font-family: 'Alegreya Sans', sans-serif;
+  color: white;
+}
+
+.top-left {
+  font-size:15px;
+  font-weight: bold;
+  padding-left:30px;
+}
+
+.top-right {
+  font-size :10px;
+  font-weight: bold;
+  padding-top:10px;
+  text-align: center;
+}
+
+.middle-left, 
+.middle-right {
+  background-color: #ffffff;
+}
+
+/* border-radius 지정 */
+.top-left {
+  border-top-left-radius: 20px;
+}
+.top-right {
+  border-top-right-radius: 20px;
+}
+.bottom-left {
+  border-bottom-left-radius: 20px;
+  padding-left:30px;
+}
+.bottom-right {
+  border-bottom-right-radius: 20px;
+}
+
+/* 왼쪽 박스들에 점선 추가 */
+
+.middle-left {
+  border-right: 2px dotted #9DD9FF;
+  padding-left:30px;
+  padding-bottom: 15px;
+}
+
+.top-left {
+  border-top-right-radius: 15px;
+}
+.bottom-left {
+  border-bottom-right-radius: 15px;
+}
+.bottom-right {
+  border-bottom-left-radius: 15px;
+}
+.top-right {
+  border-top-left-radius: 15px;
+}
+
+
+/* 내부 텍스트 스타일 */
+.ticket-subject {
+  font-size: 10px;
+  font-weight: bold;
+  color: #709ADD;
+  margin-bottom: 6px;
+}
+
+.ticket-info {
+  font-size: 7px;
+  color: #709ADD;
+  margin: 3px 0;
+}
+
+.ticket-info1 {
+  margin-left:160px;
+  margin-top:-52px;
+  font-size:30px;
+}
+
+.ticket-passenger {
+  font-size: 8px;
+  color: #709ADD;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ticket-button {
+  background-color: #BFD8FF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0px 1px;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top:30px;
+}
+
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: none;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.cancel-button,
+.submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  color: #366fc9;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.go-back-wrapper {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.go-back-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.go-back-button:hover {
+  transform: scale(1.2);
+}
