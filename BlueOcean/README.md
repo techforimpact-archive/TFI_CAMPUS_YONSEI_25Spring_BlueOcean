@@ -7,8 +7,6 @@
 
 ## 📁 프로젝트 구조
 
-<details> <summary>정상적으로 렌더링되는 마크다운 예시</summary> <pre> ``` babybaby/ ├── frontend/ # React 기반 사용자 인터페이스 │ ├── public/ │ └── src/ │ ├── App.js │ └── App.css ├── backend/ # 크롤링 및 요약 코드 │ ├── crwaling.ipynb # 웹 크롤링용 Jupyter 노트북 │ └── app.py # GPT API 기반 요약 실행 코드 ├── README.md └── ... ``` </pre> </details>
-
 babybaby/
 ├── frontend/ # React 기반 사용자 인터페이스
 │ ├── public/
@@ -36,7 +34,7 @@ babybaby/
 ## 🚀 실행 방법
 
 ### 🔹 1. 크롤링 및 요약 실행
-
+```bash
 # backend 디렉토리로 이동
 cd backend
 
@@ -45,10 +43,11 @@ jupyter notebook crwaling.ipynb
 
 # 요약 기능 실행 (OpenAI API 필요)
 python app.py
-
+'''
 ⚠️ app.py를 실행하기 위해서는 OpenAI API Key가 필요합니다. .env 파일 또는 코드 내에 API 키를 설정해주세요.
 
 ### 2. 프론트엔드 실행 (React)
+```bash
 # frontend 디렉토리로 이동
 cd frontend
 
@@ -57,6 +56,7 @@ npm install
 
 # 개발 서버 실행
 npm start
+'''
 
 🌐 실행 후 브라우저에서 http://localhost:3000 으로 접속하면 앱을 확인할 수 있습니다.
 
